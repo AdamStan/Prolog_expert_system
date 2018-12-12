@@ -53,6 +53,83 @@ austria :- 	prawda(klimat_umiarkowany),
 			prawda(kultura_germanska),
 			prawda(socjalny).
 
+belgia :-       prawda(klimat_umiarkowany),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(dostep_do_morza),
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(religa_katolicyzm),
+			prawda(socjalny).
+	
+bialorus :-    prawda(klimat_umiarkowany),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(typ_rozwoju_rozwijajacy_sie),
+			prawda(religa_prawosławie),
+			prawda(kultura_słowiańska).
+			
+bosnia i hercegowina :-	prawda(klimat_cieply), 
+				prawda(ksztalt_terenu_gorzysty),
+				prawda(typ_rozwoju_rozwijajacy_sie),
+				prawda(kultura_słowiańska),
+				prawda(religa_katolicyzm),
+				prawda(religa_prawosławie),
+				prawda(religia_islam).
+				
+bulgaria :-	prawda(klimat_cieply), 
+			prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(typ_rozwoju_rozwijajacy_sie),
+			prawda(kultura_słowiańska),
+			prawda(religa_prawosławie).
+			
+chorwacja :-	prawda(klimat_cieply), 
+			prawda(ksztalt_terenu_gorzysty), 
+			prawda(dostep_do_morza),
+			prawda(kultura_słowiańska),
+			prawda(religa_katolicyzm).
+			
+czarnogora :-	prawda(klimat_cieply), 
+			prawda(ksztalt_terenu_gorzysty),
+			prawda(dostep_do_morza),
+			prawda(kultura_słowiańska),
+			prawda(typ_rozwoju_rozwijajacy_sie),
+			prawda(religa_katolicyzm).
+			
+czechy :-	prawda(klimat_umiarkowany),
+			prawda(ksztalt_terenu_gorzysty),
+			prawda(kultura_słowiańska),
+			prawda(typ_rozwoju_rozwijajacy_sie),
+			prawda(religa_katolicyzm).
+			
+dania :- 	prawda(klimat_umiarkowany),
+			prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(religa_protestantyzm),
+			prawda(socjalny).
+			
+estonia :-	prawda(klimat_umiarkowany),
+			prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(typ_rozwoju_rozwijajacy_sie),
+			prawda(religa_protestantyzm).
+			
+finlandia :-	prawda(klimat_umiarkowany),
+			prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(religa_protestantyzm).
+			
+francja :-	prawda(klimat_umiarkowany),
+			prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(religa_katolicyzm),
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(socjalny).
+			
+grecja :-	prawda(klimat_cieply),
+			prawda(ksztalt_terenu_gorzysty),
+			prawda(dostep_do_morza),
+			prawda(religa_prawosławie).
+			
 pytanieCzy(Question) :-
         write('Czy '),
         Question,
