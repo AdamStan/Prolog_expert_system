@@ -53,6 +53,53 @@ austria :- 	prawda(klimat_umiarkowany),
 			prawda(kultura_germanska),
 			prawda(socjalny).
 
+belgia :-       prawda(klimat_umiarkowany),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(dostep_do_morza),
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(religa_katolicyzm),
+			prawda(socjalny).
+	
+bialorus :-    prawda(klimat_umiarkowany),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(typ_rozwoju_rozwijajacy_sie),
+			prawda(religa_prawosławie),
+			prawda(kultura_słowiańska).
+			
+bośnia i hercegowina :-	prawda(klimat_cieply), 
+				prawda(ksztalt_terenu_gorzysty),
+				prawda(typ_rozwoju_rozwijajacy_sie),
+				prawda(kultura_słowiańska),
+				prawda(religa_katolicyzm),
+				prawda(religa_prawosławie),
+				prawda(religia_islam).
+				
+bułgaria :-	prawda(klimat_cieply), 
+			prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(typ_rozwoju_rozwijajacy_sie),
+			prawda(kultura_słowiańska),
+			prawda(religa_prawosławie).
+			
+chorwacja :-	prawda(klimat_cieply), 
+			prawda(ksztalt_terenu_gorzysty), 
+			prawda(dostep_do_morza),
+			prawda(kultura_słowiańska),
+			prawda(religa_katolicyzm).
+			
+czarnogóra :-	prawda(klimat_cieply), 
+			prawda(ksztalt_terenu_gorzysty),
+			prawda(dostep_do_morza),
+			prawda(kultura_słowiańska),
+			prawda(typ_rozwoju_rozwijajacy_sie),
+			prawda(religa_katolicyzm).
+			
+czechy :-	prawda(klimat_umiarkowany),
+			prawda(ksztalt_terenu_gorzysty),
+			prawda(kultura_słowiańska),
+			prawda(typ_rozwoju_rozwijajacy_sie),
+			prawda(religa_katolicyzm).
+			
 pytanieCzy(Question) :-
         write('Czy '),
         Question,
