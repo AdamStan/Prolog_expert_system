@@ -130,6 +130,56 @@ grecja :-	prawda(klimat_cieply),
 			prawda(dostep_do_morza),
 			prawda(religa_prawosławie).
 			
+hiszpania :-	prawda(klimat_cieply),
+			prawda(ksztalt_terenu_gorzysty),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(dostep_do_morza),
+			prawda(religa_katolicyzm).
+			
+holandia :-	prawda(klimat_umiarkowany),
+			prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(religa_protestantyzm).
+			
+irlandia :-	prawda(klimat_umiarkowany),
+			prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(kultura_anglosaska),
+			prawda(religa_katolicyzm).
+			
+islandia :-	prawda(klimat_zimny),
+			prawda(ksztalt_terenu_gorzysty),
+			prawda(dostep_do_morza),
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(religa_katolicyzm).
+			
+kazachstan :-	prawda(klimat_umiarkowany),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(religa_prawosławie).
+			
+liechtenstein :-	prawda(klimat_umiarkowany),
+				prawda(ksztalt_terenu_gorzysty),
+				prawda(typ_rozwoju_rozwiniety),
+				prawda(religa_katolicyzm).
+				
+litwa :-	prawda(klimat_umiarkowany),
+			prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),	
+			prawda(religa_katolicyzm).
+			
+luksemburg :-	prawda(klimat_umiarkowany),
+			prawda(ksztalt_terenu_nizinny),	
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(religa_katolicyzm).
+			
+lotwa :-	prawda(klimat_umiarkowany),
+			prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),	
+			prawda(religa_protestantyzm).
+			
+			
 pytanieCzy(Question) :-
         write('Czy '),
         Question,
