@@ -179,6 +179,54 @@ lotwa :-	prawda(klimat_umiarkowany),
 			prawda(ksztalt_terenu_nizinny),	
 			prawda(religa_protestantyzm).
 			
+macedonia :-	prawda(klimat_cieply),
+			prawda(ksztalt_terenu_gorzysty),
+			prawda(religa_prawosławie).
+			
+malta :-	prawda(klimat_cieply),		
+			prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),	
+			prawda(religa_katolicyzm).
+			
+moldawia :-	prawda(klimat_umiarkowany),
+			prawda(ksztalt_terenu_nizinny),	
+			prawda(kultura_słowiańska),
+			prawda(religa_prawosławie).
+		
+monako :-	prawda(klimat_cieply),
+			prawda(ksztalt_terenu_gorzysty),
+			prawda(dostep_do_morza),
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(religa_katolicyzm).
+			
+niemcy :-	prawda(klimat_umiarkowany),
+			prawda(ksztalt_terenu_nizinny),	
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(religa_protestantyzm),
+			prawda(religa_katolicyzm),
+			prawda(socjalny).
+			
+norwegia :-	prawda(klimat_umiarkowany),
+			prawda(ksztalt_terenu_gorzysty),
+			prawda(dostep_do_morza),
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(religa_protestantyzm).
+			
+portugalia :-	prawda(klimat_cieply),
+			prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),	
+			prawda(religa_katolicyzm).
+			
+rosja :-	prawda(klimat_zimny),
+			prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),	
+			prawda(kultura_słowiańska),
+			prawda(religa_prawosławie).
+			
+rumunia :-	prawda(klimat_umiarkowany),
+			prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(religa_prawosławie).
 			
 pytanieCzy(Question) :-
         write('Czy '),
