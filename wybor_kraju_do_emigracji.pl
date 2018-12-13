@@ -200,10 +200,11 @@ monako :-	prawda(klimat_cieply),
 			prawda(religa_katolicyzm).
 			
 niemcy :-	prawda(klimat_umiarkowany),
+			prawda(dostep_do_morza),
 			prawda(ksztalt_terenu_nizinny),	
 			prawda(typ_rozwoju_rozwiniety),
-			prawda(religa_protestantyzm),
-			prawda(religa_katolicyzm),
+			( prawda(religa_protestantyzm);
+			prawda(religa_katolicyzm) ),
 			prawda(socjalny).
 			
 norwegia :-	prawda(klimat_umiarkowany),
@@ -221,12 +222,84 @@ rosja :-	prawda(klimat_zimny),
 			prawda(dostep_do_morza),
 			prawda(ksztalt_terenu_nizinny),	
 			prawda(kultura_słowiańska),
+			prawda(gestosc_zaludnienia_niska),
 			prawda(religa_prawosławie).
 			
 rumunia :-	prawda(klimat_umiarkowany),
 			prawda(dostep_do_morza),
 			prawda(ksztalt_terenu_nizinny),
 			prawda(religa_prawosławie).
+
+san_marino :- 	prawda(klimat_cieply),
+			prawda(ksztalt_terenu_gorzysty),
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(gestosc_zaludnienia_wysoka),
+			prawda(religa_katolicyzm).
+
+serbia :-	prawda(kultura_slowanska),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(typ_rozwoju_rozwijajacy),
+			prawda(religa_prawosławie).
+
+slowacja :- prawda(klimat_umiarkowany),
+			prawda(ksztalt_terenu_gorzysty),
+			prawda(typ_rozwoju_rozwijajacy),
+			prawda(kultura_slowanska),
+			prawda(blisko_polski),
+			prawda(religa_katolicyzm).
+
+slowenia :- prawda(ksztalt_terenu_gorzysty),
+			prawda(typ_rozwoju_rozwijajacy),
+			prawda(kultura_slowanska),
+			prawda(religa_katolicyzm).
+			
+szwajcaria :- 	prawda(ksztalt_terenu_gorzysty),
+			prawda(typ_rozwoju_rozwiniety),
+			( prawda(religa_katolicyzm);
+			prawda(religa_protestantyzm) ),
+				
+szwecja :- 	prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(religa_protestantyzm),
+			prawda(socjalny).
+
+turcja :-	prawda(klimat_cieply),
+			prawda(dostep_do_morza),
+			(prawda(ksztalt_terenu_nizinny) ;
+			prawda(ksztalt_terenu_gorzysty) ),
+			prawda(religia_islam).
+			
+ukraina :- 	prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(kultura_slowanska),
+			prawda(religa_prawosławie),
+			prawda(blisko_polski).
+			
+watykan :- 	prawda(klimat_cieply),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(gestosc_zaludnienia_wysoka),
+			prawda(religa_katolicyzm).
+			
+wegry :-	prawda(ksztalt_terenu_nizinny),
+			prawda(religa_katolicyzm).
+	
+wielka_brytania :- prawda(dostep_do_morza),
+			prawda(ksztalt_terenu_nizinny),
+			prawda(kultura_anglosaska),
+			prawda(gestosc_zaludnienia_wysoka),
+			prawda(religa_protestantyzm),
+			prawda(socjalny).
+			
+wlochy :- 	prawda(klimat_cieply),
+			( prawda(ksztalt_terenu_gorzysty) ;
+			prawda(ksztalt_terenu_nizinny) ),
+			prawda(dostep_do_morza),
+			prawda(typ_rozwoju_rozwiniety),
+			prawda(gestosc_zaludnienia_wysoka),
+			prawda(religa_katolicyzm),
+			prawda(socjalny).
 			
 pytanieCzy(Question) :-
         write('Czy '),
