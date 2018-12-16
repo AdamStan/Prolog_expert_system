@@ -1,6 +1,5 @@
 /* wybor_kraju_do_emigracji */
-dynamic :- prawda/1.
-dynamic :- nieprawda/1.
+:- dynamic case/1.
 
 /*
 cechy:
@@ -9,297 +8,297 @@ cechy:
 - typ_rozwoju: rozwinięty, rozwijający się, nierozwinięty
 - kultura: anglosaska, germańska, romańska, słowiańska
 - gestosc_zaludnienia: wysoka, niska
-- religa_dominujaca: katolicyzm, protestantyzm, prawosławie, islam, brak_wyznania
+- religia_dominujaca: katolicyzm, protestantyzm, prawoslawie, islam, brak_wyznania
 - blisko_polski
 - socjalny
 - dostęp do morza
 */
-
+czy(X) :- atom_concat('Czy ', X, Y), format(Y).
 /* Pytania */
-klimat_cieply :- "czy klimat ma być cieply?".
-klimat_umiarkowany :- "czy klimat ma być umiarkowany".
-klimat_zimny :- "czy klimat ma być zimny?".
-ksztalt_terenu_gorzysty :- "czy kraj ma być górzysty?".
-ksztalt_terenu_nizinny :- "czy kraj ma być nizinny?".
-typ_rozwoju_rozwiniety :- "czy ma byc to kraj rozwinięty?".
-typ_rozwoju_rozwijajacy_sie :- "czy ma to byc kraj rozwijajacy się?".
-typ_rozwoju_nierozwiniety :- "czy ma być to kraj nierozwinięty?".
-kultura_anglosaska :- "czy ma to być kraj anlosaski?".
-kultura_germanska :- "czy kraj ma być germański?".
-kultura_romanska :- "czy ma to być kraj romański?".
-kultura_slowanska :- "czy ma to być kraj słowiański?".
-gestosc_zaludnienia_wysoka :- "czy gestość zaludnienia ma być wysoka?".
-gestosc_zaludnienia_niska :- "czy gestość zaludnienia ma być niska?".
-religa_katolicyzm :- "czy kraj ma być katolicki?".
-religia_protestantyzm :- "czy kraj ma być protestancki?".
-religia_prawoslawie :- "czy kraj ma byc prawosławny?".
-religia_islam :- "czy kraj ma być mułzumański?".
-religia_brak :- "czy kraj ma być laicki?".
-blisko_polski :- "czy kraj ma być blisko Polski?".
-socjalny :- "czy kraj ma być socjalny?".
-dostep_do_morza :- "czy kraj ma byc z dostepem do morza?".
+klimat_cieply :- czy('klimat ma być cieply?').
+klimat_umiarkowany :- czy("klimat ma być umiarkowany").
+klimat_zimny :- czy("klimat ma być zimny?").
+ksztalt_terenu_gorzysty :- czy("kraj ma być górzysty?").
+ksztalt_terenu_nizinny :- czy("kraj ma być nizinny?").
+typ_rozwoju_rozwiniety :- czy("ma byc to kraj rozwinięty?").
+typ_rozwoju_rozwijajacy_sie :- czy("ma to byc kraj rozwijajacy się?").
+typ_rozwoju_nierozwiniety :- czy("ma być to kraj nierozwinięty?").
+kultura_anglosaska :- czy("ma to być kraj anlosaski?").
+kultura_germanska :- czy("czy kraj ma być germański?").
+kultura_romanska :- czy("ma to być kraj romański?").
+kultura_slowianska :- czy("ma to być kraj słowiański?").
+gestosc_zaludnienia_wysoka :- czy("gestość zaludnienia ma być wysoka?").
+gestosc_zaludnienia_niska :- czy("gestość zaludnienia ma być niska?").
+religia_katolicyzm :- czy("kraj ma być katolicki?").
+religia_protestantyzm :- czy("kraj ma być protestancki?").
+religia_prawoslawie :- czy("kraj ma byc prawosławny?").
+religia_islam :- czy("kraj ma być mułzumański?").
+religia_brak :- czy("kraj ma być laicki?").
+blisko_polski :- czy("kraj ma być blisko Polski?").
+socjalny :- czy("kraj ma być socjalny?").
+dostep_do_morza :- czy("kraj ma byc z dostepem do morza?").
 
 /* baza wiedzy */
-albania :- 	prawda(klimat_cieply), 
-			prawda(ksztalt_terenu_gorzysty), 
-			prawda(dostep_do_morza),
-			prawda(typ_rozwoju_rozwijajacy_sie),
-			prawda(religia_islam).
+albania :- 	case(klimat_cieply), 
+			case(ksztalt_terenu_gorzysty), 
+			case(dostep_do_morza),
+			case(typ_rozwoju_rozwijajacy_sie),
+			case(religia_islam).
 			
-austria :- 	prawda(klimat_umiarkowany),
-			prawda(ksztalt_terenu_gorzysty),
-			prawda(typ_rozwoju_rozwiniety),
-			prawda(religa_katolicyzm),
-			prawda(kultura_germanska),
-			prawda(socjalny).
+austria :- 	case(klimat_umiarkowany),
+			case(ksztalt_terenu_gorzysty),
+			case(typ_rozwoju_rozwiniety),
+			case(religia_katolicyzm),
+			case(kultura_germanska),
+			case(socjalny).
 
-belgia :-       prawda(klimat_umiarkowany),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(dostep_do_morza),
-			prawda(typ_rozwoju_rozwiniety),
-			prawda(religa_katolicyzm),
-			prawda(socjalny).
+belgia :-       case(klimat_umiarkowany),
+			case(ksztalt_terenu_nizinny),
+			case(dostep_do_morza),
+			case(typ_rozwoju_rozwiniety),
+			case(religia_katolicyzm),
+			case(socjalny).
 	
-bialorus :-    prawda(klimat_umiarkowany),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(typ_rozwoju_rozwijajacy_sie),
-			prawda(religa_prawosławie),
-			prawda(kultura_słowiańska).
+bialorus :-    case(klimat_umiarkowany),
+			case(ksztalt_terenu_nizinny),
+			case(typ_rozwoju_rozwijajacy_sie),
+			case(religia_prawoslawie),
+			case(kultura_slowianska).
 			
-bosnia i hercegowina :-	prawda(klimat_cieply), 
-				prawda(ksztalt_terenu_gorzysty),
-				prawda(typ_rozwoju_rozwijajacy_sie),
-				prawda(kultura_słowiańska),
-				prawda(religa_katolicyzm),
-				prawda(religa_prawosławie),
-				prawda(religia_islam).
+bosnia_i_hercegowina :-	case(klimat_cieply), 
+				case(ksztalt_terenu_gorzysty),
+				case(typ_rozwoju_rozwijajacy_sie),
+				case(kultura_slowianska),
+				( case(religia_katolicyzm);
+				case(religia_prawoslawie) ),
+				case(religia_islam).
 				
-bulgaria :-	prawda(klimat_cieply), 
-			prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(typ_rozwoju_rozwijajacy_sie),
-			prawda(kultura_słowiańska),
-			prawda(religa_prawosławie).
+bulgaria :-	case(klimat_cieply), 
+			case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),
+			case(typ_rozwoju_rozwijajacy_sie),
+			case(kultura_slowianska),
+			case(religia_prawoslawie).
 			
-chorwacja :-	prawda(klimat_cieply), 
-			prawda(ksztalt_terenu_gorzysty), 
-			prawda(dostep_do_morza),
-			prawda(kultura_słowiańska),
-			prawda(religa_katolicyzm).
+chorwacja :-	case(klimat_cieply), 
+			case(ksztalt_terenu_gorzysty), 
+			case(dostep_do_morza),
+			case(kultura_slowianska),
+			case(religia_katolicyzm).
 			
-czarnogora :-	prawda(klimat_cieply), 
-			prawda(ksztalt_terenu_gorzysty),
-			prawda(dostep_do_morza),
-			prawda(kultura_słowiańska),
-			prawda(typ_rozwoju_rozwijajacy_sie),
-			prawda(religa_katolicyzm).
+czarnogora :-	case(klimat_cieply), 
+			case(ksztalt_terenu_gorzysty),
+			case(dostep_do_morza),
+			case(kultura_slowianska),
+			case(typ_rozwoju_rozwijajacy_sie),
+			case(religia_katolicyzm).
 			
-czechy :-	prawda(klimat_umiarkowany),
-			prawda(ksztalt_terenu_gorzysty),
-			prawda(kultura_słowiańska),
-			prawda(typ_rozwoju_rozwijajacy_sie),
-			prawda(religa_katolicyzm).
+czechy :-	case(klimat_umiarkowany),
+			case(ksztalt_terenu_gorzysty),
+			case(kultura_slowianska),
+			case(typ_rozwoju_rozwijajacy_sie),
+			case(religia_katolicyzm).
 			
-dania :- 	prawda(klimat_umiarkowany),
-			prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(religa_protestantyzm),
-			prawda(socjalny).
+dania :- 	case(klimat_umiarkowany),
+			case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),
+			case(religia_protestantyzm),
+			case(socjalny).
 			
-estonia :-	prawda(klimat_umiarkowany),
-			prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(typ_rozwoju_rozwijajacy_sie),
-			prawda(religa_protestantyzm).
+estonia :-	case(klimat_umiarkowany),
+			case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),
+			case(typ_rozwoju_rozwijajacy_sie),
+			case(religia_protestantyzm).
 			
-finlandia :-	prawda(klimat_umiarkowany),
-			prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(typ_rozwoju_rozwiniety),
-			prawda(religa_protestantyzm).
+finlandia :-	case(klimat_umiarkowany),
+			case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),
+			case(typ_rozwoju_rozwiniety),
+			case(religia_protestantyzm).
 			
-francja :-	prawda(klimat_umiarkowany),
-			prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(religa_katolicyzm),
-			prawda(typ_rozwoju_rozwiniety),
-			prawda(socjalny).
+francja :-	case(klimat_umiarkowany),
+			case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),
+			case(religia_katolicyzm),
+			case(typ_rozwoju_rozwiniety),
+			case(socjalny).
 			
-grecja :-	prawda(klimat_cieply),
-			prawda(ksztalt_terenu_gorzysty),
-			prawda(dostep_do_morza),
-			prawda(religa_prawosławie).
+grecja :-	case(klimat_cieply),
+			case(ksztalt_terenu_gorzysty),
+			case(dostep_do_morza),
+			case(religia_prawoslawie).
 			
-hiszpania :-	prawda(klimat_cieply),
-			prawda(ksztalt_terenu_gorzysty),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(dostep_do_morza),
-			prawda(religa_katolicyzm).
+hiszpania :-	case(klimat_cieply),
+			case(ksztalt_terenu_gorzysty),
+			case(ksztalt_terenu_nizinny),
+			case(dostep_do_morza),
+			case(religia_katolicyzm).
 			
-holandia :-	prawda(klimat_umiarkowany),
-			prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(typ_rozwoju_rozwiniety),
-			prawda(religa_protestantyzm).
+holandia :-	case(klimat_umiarkowany),
+			case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),
+			case(typ_rozwoju_rozwiniety),
+			case(religia_protestantyzm).
 			
-irlandia :-	prawda(klimat_umiarkowany),
-			prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(typ_rozwoju_rozwiniety),
-			prawda(kultura_anglosaska),
-			prawda(religa_katolicyzm).
+irlandia :-	case(klimat_umiarkowany),
+			case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),
+			case(typ_rozwoju_rozwiniety),
+			case(kultura_anglosaska),
+			case(religia_katolicyzm).
 			
-islandia :-	prawda(klimat_zimny),
-			prawda(ksztalt_terenu_gorzysty),
-			prawda(dostep_do_morza),
-			prawda(typ_rozwoju_rozwiniety),
-			prawda(religa_katolicyzm).
+islandia :-	case(klimat_zimny),
+			case(ksztalt_terenu_gorzysty),
+			case(dostep_do_morza),
+			case(typ_rozwoju_rozwiniety),
+			case(religia_katolicyzm).
 			
-kazachstan :-	prawda(klimat_umiarkowany),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(religa_prawosławie).
+kazachstan :-	case(klimat_umiarkowany),
+			case(ksztalt_terenu_nizinny),
+			case(religia_prawoslawie).
 			
-liechtenstein :-	prawda(klimat_umiarkowany),
-				prawda(ksztalt_terenu_gorzysty),
-				prawda(typ_rozwoju_rozwiniety),
-				prawda(religa_katolicyzm).
+liechtenstein :-	case(klimat_umiarkowany),
+				case(ksztalt_terenu_gorzysty),
+				case(typ_rozwoju_rozwiniety),
+				case(religia_katolicyzm).
 				
-litwa :-	prawda(klimat_umiarkowany),
-			prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),	
-			prawda(religa_katolicyzm).
+litwa :-	case(klimat_umiarkowany),
+			case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),	
+			case(religia_katolicyzm).
 			
-luksemburg :-	prawda(klimat_umiarkowany),
-			prawda(ksztalt_terenu_nizinny),	
-			prawda(typ_rozwoju_rozwiniety),
-			prawda(religa_katolicyzm).
+luksemburg :-	case(klimat_umiarkowany),
+			case(ksztalt_terenu_nizinny),	
+			case(typ_rozwoju_rozwiniety),
+			case(religia_katolicyzm).
 			
-lotwa :-	prawda(klimat_umiarkowany),
-			prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),	
-			prawda(religa_protestantyzm).
+lotwa :-	case(klimat_umiarkowany),
+			case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),	
+			case(religia_protestantyzm).
 			
-macedonia :-	prawda(klimat_cieply),
-			prawda(ksztalt_terenu_gorzysty),
-			prawda(religa_prawosławie).
+macedonia :-	case(klimat_cieply),
+			case(ksztalt_terenu_gorzysty),
+			case(religia_prawoslawie).
 			
-malta :-	prawda(klimat_cieply),		
-			prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),	
-			prawda(religa_katolicyzm).
+malta :-	case(klimat_cieply),		
+			case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),	
+			case(religia_katolicyzm).
 			
-moldawia :-	prawda(klimat_umiarkowany),
-			prawda(ksztalt_terenu_nizinny),	
-			prawda(kultura_słowiańska),
-			prawda(religa_prawosławie).
+moldawia :-	case(klimat_umiarkowany),
+			case(ksztalt_terenu_nizinny),	
+			case(kultura_slowianska),
+			case(religia_prawoslawie).
 		
-monako :-	prawda(klimat_cieply),
-			prawda(ksztalt_terenu_gorzysty),
-			prawda(dostep_do_morza),
-			prawda(typ_rozwoju_rozwiniety),
-			prawda(religa_katolicyzm).
+monako :-	case(klimat_cieply),
+			case(ksztalt_terenu_gorzysty),
+			case(dostep_do_morza),
+			case(typ_rozwoju_rozwiniety),
+			case(religia_katolicyzm).
 			
-niemcy :-	prawda(klimat_umiarkowany),
-			prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),	
-			prawda(typ_rozwoju_rozwiniety),
-			( prawda(religa_protestantyzm);
-			prawda(religa_katolicyzm) ),
-			prawda(socjalny).
+niemcy :-	case(klimat_umiarkowany),
+			case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),	
+			case(typ_rozwoju_rozwiniety),
+			( case(religia_protestantyzm);
+			case(religia_katolicyzm) ),
+			case(socjalny).
 			
-norwegia :-	prawda(klimat_umiarkowany),
-			prawda(ksztalt_terenu_gorzysty),
-			prawda(dostep_do_morza),
-			prawda(typ_rozwoju_rozwiniety),
-			prawda(religa_protestantyzm).
+norwegia :-	case(klimat_umiarkowany),
+			case(ksztalt_terenu_gorzysty),
+			case(dostep_do_morza),
+			case(typ_rozwoju_rozwiniety),
+			case(religia_protestantyzm).
 			
-portugalia :-	prawda(klimat_cieply),
-			prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),	
-			prawda(religa_katolicyzm).
+portugalia :-	case(klimat_cieply),
+			case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),	
+			case(religia_katolicyzm).
 			
-rosja :-	prawda(klimat_zimny),
-			prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),	
-			prawda(kultura_słowiańska),
-			prawda(gestosc_zaludnienia_niska),
-			prawda(religa_prawosławie).
+rosja :-	case(klimat_zimny),
+			case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),	
+			case(kultura_slowianska),
+			case(gestosc_zaludnienia_niska),
+			case(religia_prawoslawie).
 			
-rumunia :-	prawda(klimat_umiarkowany),
-			prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(religa_prawosławie).
+rumunia :-	case(klimat_umiarkowany),
+			case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),
+			case(religia_prawoslawie).
 
-san_marino :- 	prawda(klimat_cieply),
-			prawda(ksztalt_terenu_gorzysty),
-			prawda(typ_rozwoju_rozwiniety),
-			prawda(gestosc_zaludnienia_wysoka),
-			prawda(religa_katolicyzm).
+san_marino :- 	case(klimat_cieply),
+			case(ksztalt_terenu_gorzysty),
+			case(typ_rozwoju_rozwiniety),
+			case(gestosc_zaludnienia_wysoka),
+			case(religia_katolicyzm).
 
-serbia :-	prawda(kultura_slowanska),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(typ_rozwoju_rozwijajacy),
-			prawda(religa_prawosławie).
+serbia :-	case(caseanska),
+			case(ksztalt_terenu_nizinny),
+			case(typ_rozwoju_rozwijajacy),
+			case(religia_prawoslawie).
 
-slowacja :- prawda(klimat_umiarkowany),
-			prawda(ksztalt_terenu_gorzysty),
-			prawda(typ_rozwoju_rozwijajacy),
-			prawda(kultura_slowanska),
-			prawda(blisko_polski),
-			prawda(religa_katolicyzm).
+slowacja :- case(klimat_umiarkowany),
+			case(ksztalt_terenu_gorzysty),
+			case(typ_rozwoju_rozwijajacy),
+			case(kultura_slowianska),
+			case(blisko_polski),
+			case(religia_katolicyzm).
 
-slowenia :- prawda(ksztalt_terenu_gorzysty),
-			prawda(typ_rozwoju_rozwijajacy),
-			prawda(kultura_slowanska),
-			prawda(religa_katolicyzm).
+slowenia :- case(ksztalt_terenu_gorzysty),
+			case(typ_rozwoju_rozwijajacy),
+			case(kultura_slowianska),
+			case(religia_katolicyzm).
 			
-szwajcaria :- 	prawda(ksztalt_terenu_gorzysty),
-			prawda(typ_rozwoju_rozwiniety),
-			( prawda(religa_katolicyzm);
-			prawda(religa_protestantyzm) ),
+szwajcaria :- 	case(ksztalt_terenu_gorzysty),
+			case(typ_rozwoju_rozwiniety),
+			( case(religia_katolicyzm);
+			case(religia_protestantyzm) ).
 				
-szwecja :- 	prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(typ_rozwoju_rozwiniety),
-			prawda(religa_protestantyzm),
-			prawda(socjalny).
+szwecja :- 	case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),
+			case(typ_rozwoju_rozwiniety),
+			case(religia_protestantyzm),
+			case(socjalny).
 
-turcja :-	prawda(klimat_cieply),
-			prawda(dostep_do_morza),
-			(prawda(ksztalt_terenu_nizinny) ;
-			prawda(ksztalt_terenu_gorzysty) ),
-			prawda(religia_islam).
+turcja :-	case(klimat_cieply),
+			case(dostep_do_morza),
+			(case(ksztalt_terenu_nizinny) ;
+			case(ksztalt_terenu_gorzysty) ),
+			case(religia_islam).
 			
-ukraina :- 	prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(kultura_slowanska),
-			prawda(religa_prawosławie),
-			prawda(blisko_polski).
+ukraina :- 	case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),
+			case(kultura_slowianska),
+			case(religia_prawoslawie),
+			case(blisko_polski).
 			
-watykan :- 	prawda(klimat_cieply),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(typ_rozwoju_rozwiniety),
-			prawda(gestosc_zaludnienia_wysoka),
-			prawda(religa_katolicyzm).
+watykan :- 	case(klimat_cieply),
+			case(ksztalt_terenu_nizinny),
+			case(typ_rozwoju_rozwiniety),
+			case(gestosc_zaludnienia_wysoka),
+			case(religia_katolicyzm).
 			
-wegry :-	prawda(ksztalt_terenu_nizinny),
-			prawda(religa_katolicyzm).
+wegry :-	case(ksztalt_terenu_nizinny),
+			case(religia_katolicyzm).
 	
-wielka_brytania :- prawda(dostep_do_morza),
-			prawda(ksztalt_terenu_nizinny),
-			prawda(kultura_anglosaska),
-			prawda(gestosc_zaludnienia_wysoka),
-			prawda(religa_protestantyzm),
-			prawda(socjalny).
+wielka_brytania :- case(dostep_do_morza),
+			case(ksztalt_terenu_nizinny),
+			case(kultura_anglosaska),
+			case(gestosc_zaludnienia_wysoka),
+			case(religia_protestantyzm),
+			case(socjalny).
 			
-wlochy :- 	prawda(klimat_cieply),
-			( prawda(ksztalt_terenu_gorzysty) ;
-			prawda(ksztalt_terenu_nizinny) ),
-			prawda(dostep_do_morza),
-			prawda(typ_rozwoju_rozwiniety),
-			prawda(gestosc_zaludnienia_wysoka),
-			prawda(religa_katolicyzm),
-			prawda(socjalny).
+wlochy :- 	case(klimat_cieply),
+			( case(ksztalt_terenu_gorzysty) ;
+			case(ksztalt_terenu_nizinny) ),
+			case(dostep_do_morza),
+			case(typ_rozwoju_rozwiniety),
+			case(gestosc_zaludnienia_wysoka),
+			case(religia_katolicyzm),
+			case(socjalny).
 			
 pytanieCzy(Question) :-
         write('Czy '),
@@ -307,11 +306,7 @@ pytanieCzy(Question) :-
         read(Response),
         ( (Response == yes ; Response == y)
                 ->
-                asserta(prawda(Question)) ;
-                asserta(nieprawda(Question)), fail).
+                asserta(case(Question)) ;
+                asserta(niecase(Question)), fail).
 				
-start :- 
-			/* zadaj pytania
-			wnioskuj
-			*/
-			
+start_p :- \+(albania,wlochy).
