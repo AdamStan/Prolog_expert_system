@@ -301,12 +301,11 @@ wlochy :- 	case(klimat_cieply),
 			case(socjalny).
 			
 pytanieCzy(Question) :-
-        write('Czy '),
         Question,
         read(Response),
         ( (Response == yes ; Response == y)
                 ->
                 asserta(case(Question)) ;
-                asserta(niecase(Question)), fail).
+                _, fail).
 				
 start_p :- \+(albania,wlochy).
