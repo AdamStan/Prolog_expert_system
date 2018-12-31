@@ -98,65 +98,62 @@ bulgaria :-	case(klimat_cieply),
 		case(dostep_do_morza).
 			
 chorwacja :-	case(klimat_cieply), 
-			case(ksztalt_terenu_gorzysty), 
-			case(dostep_do_morza),
-			case(kultura_slowianska),
-			case(religia_katolicyzm).
+		case(typ_rozwoju_rozwijajacy_sie),
+		case(kultura_slowianska),
+		case(religia_katolicyzm),
+		case(dostep_do_morza),
 			
 czarnogora :-	case(klimat_cieply), 
-			case(ksztalt_terenu_gorzysty),
-			case(dostep_do_morza),
-			case(kultura_slowianska),
-			case(typ_rozwoju_rozwijajacy_sie),
-			case(religia_katolicyzm).
+		case(typ_rozwoju_rozwijajacy_sie),
+		case(kultura_slowianska),
+		case(religia_katolicyzm).
+		case(dostep_do_morza).
 			
 czechy :-	case(klimat_umiarkowany),
-			case(ksztalt_terenu_gorzysty),
-			case(kultura_slowianska),
-			case(typ_rozwoju_rozwijajacy_sie),
-			case(religia_katolicyzm).
+		case(typ_rozwoju_rozwijajacy_sie),	
+		case(kultura_slowianska),
+		case(religia_katolicyzm).
 			
 dania :- 	case(klimat_umiarkowany),
-			case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),
-			case(religia_protestantyzm),
-			case(socjalny).
+		case(typ_rozwoju_rozwiniety),	
+		case(religia_protestantyzm),
+		case(socjalny),
+		case(dostep_do_morza).
 			
 estonia :-	case(klimat_umiarkowany),
-			case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),
-			case(typ_rozwoju_rozwijajacy_sie),
-			case(religia_protestantyzm).
-			
+		case(typ_rozwoju_rozwijajacy_sie),
+		case(religia_protestantyzm),
+		case(dostep_do_morza).
+
 finlandia :-	case(klimat_umiarkowany),
-			case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),
-			case(typ_rozwoju_rozwiniety),
-			case(religia_protestantyzm).
+		case(typ_rozwoju_rozwiniety),
+		case(religia_protestantyzm),
+		case(socjalny),
+		case(dostep_do_morza).
 			
 francja :-	case(klimat_umiarkowany),
-			case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),
-			case(religia_katolicyzm),
-			case(typ_rozwoju_rozwiniety),
-			case(socjalny).
-			
+		case(typ_rozwoju_rozwiniety),
+		case(religia_katolicyzm),
+		case(socjalny),
+		case(dostep_do_morza).
+
 grecja :-	case(klimat_cieply),
-			case(ksztalt_terenu_gorzysty),
-			case(dostep_do_morza),
-			case(religia_prawoslawie).
-			
+		case(typ_rozwoju_rozwijajacy_sie),
+		case(religia_prawoslawie),
+		case(socjalny),
+		case(dostep_do_morza).
+
 hiszpania :-	case(klimat_cieply),
-			case(ksztalt_terenu_gorzysty),
-			case(ksztalt_terenu_nizinny),
-			case(dostep_do_morza),
-			case(religia_katolicyzm).
-			
+		case(typ_rozwoju_rozwiniety),	
+		case(religia_katolicyzm),
+		case(socjalny),
+		case(dostep_do_morza).
+						
 holandia :-	case(klimat_umiarkowany),
-			case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),
-			case(typ_rozwoju_rozwiniety),
-			case(religia_protestantyzm).
+		case(typ_rozwoju_rozwiniety),
+		case(religia_protestantyzm),
+		case(socjalny),
+		case(dostep_do_morza).
 			
 irlandia :-	case(klimat_umiarkowany),
 			case(dostep_do_morza),
