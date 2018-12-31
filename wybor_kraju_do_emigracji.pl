@@ -25,7 +25,7 @@ typ_rozwoju_rozwijajacy_sie :- czy("ma to byc kraj rozwijajacy się?").
 typ_rozwoju_nierozwiniety :- czy("ma być to kraj nierozwinięty?").
 kultura_anglosaska :- czy("ma to być kraj anlosaski?").
 kultura_germanska :- czy("czy kraj ma być germański?").
-kultura_romanska :- czy("ma to być kraj romański?").
+/*kultura_romanska :- czy("ma to być kraj romański?").*/
 kultura_slowianska :- czy("ma to być kraj słowiański?").
 /*gestosc_zaludnienia_wysoka :- czy("gestość zaludnienia ma być wysoka?").
 gestosc_zaludnienia_niska :- czy("gestość zaludnienia ma być niska?").*/
@@ -34,35 +34,30 @@ religia_protestantyzm :- czy("kraj ma być protestancki?").
 religia_prawoslawie :- czy("kraj ma byc prawosławny?").
 religia_islam :- czy("kraj ma być mułzumański?").
 religia_brak :- czy("kraj ma być laicki?").
-blisko_polski :- czy("kraj ma być blisko Polski?").
+/*blisko_polski :- czy("kraj ma być blisko Polski?").*/
 socjalny :- czy("kraj ma być socjalny?").
 dostep_do_morza :- czy("kraj ma byc z dostepem do morza?").
-opieka_zdrowotna :- czy("interesuje cie dobra opieka zdrowotna?").
-dlugie_zycie :- czy("chcesz miec wieksze szanse?").
-miasto :- czy("wolisz zycie w miescie niz na wsi?").
+/*opieka_zdrowotna :- czy("interesuje cie dobra opieka zdrowotna?").*/
+/*dlugie_zycie :- czy("chcesz miec wieksze szanse?").*/
+/*miasto :- czy("wolisz zycie w miescie niz na wsi?").*/
 
 lista_pytan([
 	klimat_cieply, 					/*1*/
 	klimat_umiarkowany,				/*2*/
 	klimat_zimny,					/*3*/
-	typ_rozwoju_rozwiniety,			/*4*/
-	typ_rozwoju_rozwijajacy_sie,	/*5*/
-	typ_rozwoju_nierozwiniety,		/*6*/
+	typ_rozwoju_rozwiniety,			        /*4*/
+	typ_rozwoju_rozwijajacy_sie,	                /*5*/
+	typ_rozwoju_nierozwiniety,		        /*6*/
 	kultura_anglosaska,				/*7*/
 	kultura_germanska,				/*8*/
-	kultura_romanska,				/*9*/
-	kultura_slowianska,				/*10*/
-	religia_katolicyzm,				/*11*/
-	religia_protestantyzm,			/*12*/
-	religia_prawoslawie,			/*13*/
-	religia_islam,					/*14*/
-	religia_brak,					/*15*/
-	blisko_polski,					/*16*/
-	socjalny,						/*17*/
-	dostep_do_morza,				/*18*/
-	opieka_zdrowotna,				/*19*/
-	dlugie_zycie,					/*20*/
-	miasto							/*21*/
+	kultura_slowianska,				/*9*/
+	religia_katolicyzm,				/*10*/
+	religia_protestantyzm,			        /*11*/
+	religia_prawoslawie,			        /*12*/
+	religia_islam,					/*13*/
+	religia_brak,					/*14*/
+	socjalny,					/*15*/	
+	dostep_do_morza,				/*16*/
 ]).
 
 /* baza wiedzy */
