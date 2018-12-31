@@ -87,10 +87,10 @@ bialorus :-    case(klimat_umiarkowany),
 bosnia_i_hercegowina :-		case(klimat_cieply), 
 				case(typ_rozwoju_rozwijajacy_sie),
 				case(kultura_slowianska),
-				case(religia_katolicyzm),
-				case(religia_prawoslawie),
-				case(religia_islam).
-				
+				(case(religia_katolicyzm) ;
+				case(religia_prawoslawie) ;
+				case(religia_islam) ).
+								
 bulgaria :-	case(klimat_cieply), 
 		case(typ_rozwoju_rozwijajacy_sie),
 		case(kultura_slowianska),
@@ -156,163 +156,145 @@ holandia :-	case(klimat_umiarkowany),
 		case(dostep_do_morza).
 			
 irlandia :-	case(klimat_umiarkowany),
-			case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),
-			case(typ_rozwoju_rozwiniety),
-			case(kultura_anglosaska),
-			case(religia_katolicyzm).
+		case(typ_rozwoju_rozwiniety),
+		case(kultura_anglosaska),
+		case(religia_katolicyzm),
+		case(socjalny),
+		case(dostep_do_morza).
 			
 islandia :-	case(klimat_zimny),
-			case(ksztalt_terenu_gorzysty),
-			case(dostep_do_morza),
-			case(typ_rozwoju_rozwiniety),
-			case(religia_katolicyzm).
-			
-kazachstan :-	case(klimat_umiarkowany),
-			case(ksztalt_terenu_nizinny),
-			case(religia_prawoslawie).
+		case(typ_rozwoju_rozwiniety),	
+		case(religia_katolicyzm),
+		case(socjalny),
+		case(dostep_do_morza).
 			
 liechtenstein :-	case(klimat_umiarkowany),
-				case(ksztalt_terenu_gorzysty),
-				case(typ_rozwoju_rozwiniety),
-				case(religia_katolicyzm).
+			case(typ_rozwoju_rozwiniety),
+			case(religia_katolicyzm).
 				
 litwa :-	case(klimat_umiarkowany),
-			case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),	
-			case(religia_katolicyzm).
+		case(typ_rozwoju_rozwijajacy_sie),	
+		case(religia_katolicyzm),
+		case(dostep_do_morza).
 			
 luksemburg :-	case(klimat_umiarkowany),
-			case(ksztalt_terenu_nizinny),	
-			case(typ_rozwoju_rozwiniety),
-			case(religia_katolicyzm).
+		case(typ_rozwoju_rozwiniety),
+		case(religia_katolicyzm),
+		case(socjalny).
 			
 lotwa :-	case(klimat_umiarkowany),
-			case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),	
-			case(religia_protestantyzm).
+		case(typ_rozwoju_rozwijajacy_sie),	
+		case(religia_protestantyzm),
+		case(dostep_do_morza).
 			
 macedonia :-	case(klimat_cieply),
-			case(ksztalt_terenu_gorzysty),
-			case(religia_prawoslawie).
+		case(typ_rozwoju_rozwijajacy_sie),	
+		case(religia_prawoslawie).
 			
-malta :-	case(klimat_cieply),		
-			case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),	
-			case(religia_katolicyzm).
+malta :-	case(klimat_cieply),
+		case(typ_rozwoju_rozwijajacy_sie),
+		case(religia_katolicyzm),
+		case(dostep_do_morza).
 			
 moldawia :-	case(klimat_umiarkowany),
-			case(ksztalt_terenu_nizinny),	
-			case(kultura_slowianska),
-			case(religia_prawoslawie).
+		case(typ_rozwoju_rozwijajacy_sie),
+		case(kultura_slowianska),
+		case(religia_prawoslawie).
 		
 monako :-	case(klimat_cieply),
-			case(ksztalt_terenu_gorzysty),
-			case(dostep_do_morza),
-			case(typ_rozwoju_rozwiniety),
-			case(religia_katolicyzm).
+		case(typ_rozwoju_rozwiniety),	
+		case(religia_katolicyzm),
+		case(dostep_do_morza).
 			
 niemcy :-	case(klimat_umiarkowany),
-			case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),	
-			case(typ_rozwoju_rozwiniety),
-			( case(religia_protestantyzm);
-			case(religia_katolicyzm) ),
-			case(socjalny).
+		case(typ_rozwoju_rozwiniety),
+		case(kultura_germanska),
+		(case(religia_protestantyzm);
+		case(religia_katolicyzm)),
+		case(socjalny),
+		case(dostep_do_morza).
 			
 norwegia :-	case(klimat_umiarkowany),
-			case(ksztalt_terenu_gorzysty),
-			case(dostep_do_morza),
-			case(typ_rozwoju_rozwiniety),
-			case(religia_protestantyzm).
+		case(typ_rozwoju_rozwiniety),
+		case(religia_protestantyzm),
+		case(dostep_do_morza).
 			
 portugalia :-	case(klimat_cieply),
-			case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),	
-			case(religia_katolicyzm).
+		case(typ_rozwoju_rozwiniety),
+		case(religia_katolicyzm),
+		case(socjalny),
+		case(dostep_do_morza).
 			
 rosja :-	case(klimat_zimny),
-			case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),	
-			case(kultura_slowianska),
-			case(gestosc_zaludnienia_niska),
-			case(religia_prawoslawie).
+		case(typ_rozwoju_rozwijajacy_sie),
+		case(kultura_slowianska),
+		case(religia_prawoslawie).
+		case(dostep_do_morza),
 			
 rumunia :-	case(klimat_umiarkowany),
-			case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),
-			case(religia_prawoslawie).
+		case(typ_rozwoju_rozwijajacy_sie),	
+		case(religia_prawoslawie),
+		case(dostep_do_morza).
 
 san_marino :- 	case(klimat_cieply),
-			case(ksztalt_terenu_gorzysty),
-			case(typ_rozwoju_rozwiniety),
-			case(gestosc_zaludnienia_wysoka),
-			case(religia_katolicyzm).
+		case(typ_rozwoju_rozwiniety),
+		case(religia_katolicyzm).
 
-serbia :-	case(caseanska),
-			case(ksztalt_terenu_nizinny),
-			case(typ_rozwoju_rozwijajacy),
-			case(religia_prawoslawie).
+serbia :-	case(klimat_umiarkowany),
+		case(typ_rozwoju_rozwijajacy_sie),
+		case(religia_prawoslawie).
 
-slowacja :- case(klimat_umiarkowany),
-			case(ksztalt_terenu_gorzysty),
-			case(typ_rozwoju_rozwijajacy),
-			case(kultura_slowianska),
-			case(blisko_polski),
-			case(religia_katolicyzm).
+slowacja :- 	case(klimat_umiarkowany),
+		case(typ_rozwoju_rozwijajacy),
+		case(kultura_slowianska),
+		case(religia_katolicyzm).
 
-slowenia :- case(ksztalt_terenu_gorzysty),
-			case(typ_rozwoju_rozwijajacy),
-			case(kultura_slowianska),
-			case(religia_katolicyzm).
+slowenia :- 	case(klimat_umiarkowany),
+		case(typ_rozwoju_rozwijajacy),
+		case(kultura_slowianska),
+		case(religia_katolicyzm).
 			
-szwajcaria :- 	case(ksztalt_terenu_gorzysty),
-			case(typ_rozwoju_rozwiniety),
-			( case(religia_katolicyzm);
-			case(religia_protestantyzm) ).
+szwajcaria :- 	case(klimat_umiarkowany),
+		case(typ_rozwoju_rozwiniety),
+		(case(religia_katolicyzm) ;
+		case(religia_protestantyzm) ).
 				
-szwecja :- 	case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),
-			case(typ_rozwoju_rozwiniety),
-			case(religia_protestantyzm),
-			case(socjalny).
+szwecja :- 	case(klimat_zimny),
+		case(typ_rozwoju_rozwiniety),
+		case(religia_protestantyzm),
+		case(socjalny),
+		case(dostep_do_morza).
 
 turcja :-	case(klimat_cieply),
-			case(dostep_do_morza),
-			(case(ksztalt_terenu_nizinny) ;
-			case(ksztalt_terenu_gorzysty) ),
-			case(religia_islam).
+		case(typ_rozwoju_rozwijajacy_sie),
+		case(religia_islam),
+		case(dostep_do_morza).
 			
-ukraina :- 	case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),
-			case(kultura_slowianska),
-			case(religia_prawoslawie),
-			case(blisko_polski).
+ukraina :- 	case(klimat_umiarkowany),
+		case(typ_rozwoju_rozwijajacy_sie),
+		case(kultura_slowianska),
+		case(religia_prawoslawie),
+		case(dostep_do_morza).
 			
 watykan :- 	case(klimat_cieply),
-			case(ksztalt_terenu_nizinny),
-			case(typ_rozwoju_rozwiniety),
-			case(gestosc_zaludnienia_wysoka),
-			case(religia_katolicyzm).
+		case(typ_rozwoju_rozwiniety),
+		case(religia_katolicyzm).
 			
-wegry :-	case(ksztalt_terenu_nizinny),
-			case(religia_katolicyzm).
+wegry :-	case(klimat_umiarkowany),
+		case(typ_rozwoju_rozwijajacy_sie),
+		case(religia_katolicyzm).
 	
-wielka_brytania :- case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),
+wielka_brytania :-	case(klimat_umiarkowany),
 			case(kultura_anglosaska),
-			case(gestosc_zaludnienia_wysoka),
 			case(religia_protestantyzm),
-			case(socjalny).
+			case(socjalny),
+			case(dostep_do_morza).
 			
 wlochy :- 	case(klimat_cieply),
-			( case(ksztalt_terenu_gorzysty) ;
-			case(ksztalt_terenu_nizinny) ),
-			case(dostep_do_morza),
-			case(typ_rozwoju_rozwiniety),
-			case(gestosc_zaludnienia_wysoka),
-			case(religia_katolicyzm),
-			case(socjalny).
+		case(typ_rozwoju_rozwiniety),	
+		case(religia_katolicyzm),
+		case(socjalny),
+		case(dostep_do_morza).
 
 lista_odpowiedzi([
 	wlochy, wielka_brytania, wegry, watykan, ukraina,
