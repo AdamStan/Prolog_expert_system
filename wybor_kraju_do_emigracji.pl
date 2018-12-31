@@ -62,45 +62,40 @@ lista_pytan([
 
 /* baza wiedzy */
 albania :- 	case(klimat_cieply), 
-			case(ksztalt_terenu_gorzysty), 
-			case(dostep_do_morza),
-			case(typ_rozwoju_rozwijajacy_sie),
-			case(religia_islam).
+		case(typ_rozwoju_rozwijajacy_sie),
+		case(religia_islam),
+		case(dostep_do_morza).
 			
 austria :- 	case(klimat_umiarkowany),
-			case(ksztalt_terenu_gorzysty),
-			case(typ_rozwoju_rozwiniety),
-			case(religia_katolicyzm),
-			case(kultura_germanska),
-			case(socjalny).
+		case(typ_rozwoju_rozwiniety),
+		case(kultura_germanska),
+		case(religia_katolicyzm),
+		case(socjalny).
 
 belgia :-       case(klimat_umiarkowany),
-			case(ksztalt_terenu_nizinny),
-			case(dostep_do_morza),
-			case(typ_rozwoju_rozwiniety),
-			case(religia_katolicyzm),
-			case(socjalny).
+		case(dostep_do_morza),
+		case(typ_rozwoju_rozwiniety),
+		case(religia_katolicyzm),
+		case(socjalny).
 	
 bialorus :-    case(klimat_umiarkowany),
-			case(ksztalt_terenu_nizinny),
-			case(typ_rozwoju_rozwijajacy_sie),
-			case(religia_prawoslawie),
-			case(kultura_slowianska).
+	       case(typ_rozwoju_rozwijajacy_sie),
+	       case(kultura_slowianska),
+	       case(religia_prawoslawie).
 			
-bosnia_i_hercegowina :-	case(klimat_cieply), 
-				case(ksztalt_terenu_gorzysty),
+			
+bosnia_i_hercegowina :-		case(klimat_cieply), 
 				case(typ_rozwoju_rozwijajacy_sie),
 				case(kultura_slowianska),
-				( case(religia_katolicyzm);
-				case(religia_prawoslawie) ),
+				case(religia_katolicyzm),
+				case(religia_prawoslawie),
 				case(religia_islam).
 				
 bulgaria :-	case(klimat_cieply), 
-			case(dostep_do_morza),
-			case(ksztalt_terenu_nizinny),
-			case(typ_rozwoju_rozwijajacy_sie),
-			case(kultura_slowianska),
-			case(religia_prawoslawie).
+		case(typ_rozwoju_rozwijajacy_sie),
+		case(kultura_slowianska),
+		case(religia_prawoslawie),
+		case(dostep_do_morza).
 			
 chorwacja :-	case(klimat_cieply), 
 			case(ksztalt_terenu_gorzysty), 
